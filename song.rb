@@ -1,9 +1,8 @@
 class Song
   
-  attr_reader :name, :song_array
+  attr_reader :name
   def initialize(name)
     @name = name
-    @song_array = []
   end
 
 
