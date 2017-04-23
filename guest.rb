@@ -14,4 +14,15 @@ class Guest
   def pay_entry_fee(entry_cost)
     @money -= entry_cost
   end
+
+  def cheer(room)
+    for song in room.playlist do
+      if song.name == @favourite_song
+        return "Wooohoo"
+      end
+    end
+  end
+
+
+
 end

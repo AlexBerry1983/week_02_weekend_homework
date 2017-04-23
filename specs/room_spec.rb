@@ -52,4 +52,14 @@ class RoomTest < Minitest::Test
     @guest1.pay_for_drink(10)
     assert_equal(90, @guest1.money)
   end
+
+  def test_react_to_song
+    @room1.add_guest(@guest1)
+    @room1.add_guest(@guest3)
+    @room1.add_song_to_playlist(@song1)
+
+    assert_equal("Wooohoo", @guest3.cheer(@room1))
+  end 
+
+
 end

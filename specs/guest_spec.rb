@@ -24,4 +24,5 @@ class TestGuest < Minitest::Test
     assert_equal("Son of a preacher man", @guest.favourite_song)
   end
 
+  
 end

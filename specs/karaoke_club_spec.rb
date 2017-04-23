@@ -33,4 +33,6 @@ class TestKaraoke_club < Minitest::Test
     @guest1.pay_entry_fee(10)
     assert_equal(90, @guest1.money)
   end
+
+  
 end
