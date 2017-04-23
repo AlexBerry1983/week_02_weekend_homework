@@ -47,4 +47,9 @@ class RoomTest < Minitest::Test
     @room1.add_guest(@guest4)
     assert_equal(3, @room1.guest_array.count)
   end
+
+  def test_pay_for_drink
+    @guest1.pay_for_drink(10)
+    assert_equal(90, @guest1.money)
+  end
 end

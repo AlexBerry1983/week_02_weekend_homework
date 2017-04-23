@@ -2,6 +2,7 @@ require('minitest/autorun')
 require('minitest/rg')
 require_relative('../karaoke_club')
 require_relative('../room')
+require_relative('../guest')
 
 class TestKaraoke_club < Minitest::Test
 
@@ -10,6 +11,7 @@ class TestKaraoke_club < Minitest::Test
     @room1 = Room.new
     @room2 = Room.new
     @room3 = Room.new
+    @guest1 = Guest.new("Alex", 100, "Son of a preacher man")
   end
 
   def test_can_create_club
@@ -27,7 +29,8 @@ class TestKaraoke_club < Minitest::Test
     assert_equal(2, @club.number_of_rooms.count)
   end
 
-
-
-
+  def test_pay_entry_fee
+    @guest1.pay_entry_fee(10)
+    assert_equal(90, @guest1.money)
+  end
 end
